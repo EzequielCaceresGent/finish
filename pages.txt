@@ -1,0 +1,87 @@
+
+area comercial carga la propuesta
+el tecnico la puede ver y hace la especificacion tecnica
+comercial marca "enviado a cliente"
+cliente aprueba rechaza o observa (el que actualiza es el comercial)
+
+Paginas:
+	Login
+		Toma usuario y contraseña y fetchea los datos del empleado (pricipalmente el area)
+		En base al area redirecciona a la pagina que corresponda
+	Empleados
+		Solo la ven el area de RRHH
+		Permite la carge de nuevos empleados y la revision de peticiones de vacacion
+		Permite ver el historial de vacaciones del empleado
+	Propuestas 
+		solo lo ven empleados del area tecnica o comercial
+		(Area comercial)
+		Permite la carga de propuestas
+		Permite ver las propuestas pendientes
+		Permite la aprobacion de propuestas
+		(Area tecnica)
+		en caso de no estar en un proyecto, permite rechazar o aceptar una propuesta (subir pdf)
+		en caso de estar en un proyecto, se oculta la pestaña
+	Proyecto
+		solo lo ven empleados del area tecnica o desarrollo
+		(Area tecnica)
+			Muestra tareas pendientes de todos los empleados asignados al proyecto
+			Permite revision y asignacion de tareas
+		(Area desarrollo)
+			Muestra tareas pendientes del empleado
+			Permite marcarlas como completadas pendiente revision
+	Vacaciones
+		Visible para todos
+		permite pedir vacaciones
+
+Paginas:
+	Login
+		Datos del empleado*
+	Empleados
+		Lista de empleados*
+		Lista de peticiones de vacaciones*
+	Propuestas 
+		solo lo ven empleados del area tecnica o comercial
+		(Area comercial)
+		Lista propuestas pendientes
+		(Area tecnica)
+		Lista propuestas pendientes
+		Lista de empleados libres
+	Proyecto
+		solo lo ven empleados del area tecnica o desarrollo
+		(Area tecnica)
+			Proyecto a cargo
+			Empleados a cargo
+			Tareas del proyecto
+		(Area desarrollo)
+			proyecto asignado
+			tareas pendientes del empleado
+	Vacaciones
+		peticiones pendientes
+
+
+empleado peton
+	datos generales proyecto
+	tareas asignadas
+		marca completada (pendiente a revision)
+
+empleado jefe proyecto 
+	acepta o rechaza laburar en un proyecto
+	pagina proyecto
+		datos proyecto
+		datos del cliente
+		empleado a cargo (al hacer click muesta actividades)
+		lista de actividades (otra vez)
+		revisa tareas
+		carga desvios
+
+
+empleado area comercial
+	pagina propuestas (acepta/ rechaza)
+		carga la propuesta y asigna jefe proyecto
+		carga datos cliente
+			
+
+empleado rrhh
+	pagina vacaciones
+	lista empleados
+	carga empleados

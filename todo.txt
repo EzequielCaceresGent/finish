@@ -1,0 +1,133 @@
+get empleados param estado?*
+post empleados*
+get peticiones*
+post peticiones*
+patch peticiones*
+get propuestas*
+post propuestas*
+get clientes*
+post clientes*
+get proyecto/id*
+post desvio*
+get tareas param empleado?, proyecto?*
+post tareas*
+
+/login POST consigue datos del empleado(mover?)
+/clientes 
+	GET, *
+	POST *
+{
+    "companyName": "goofycompany",
+    "companyAddress": "aldj",
+    "description": "dlkjfal",
+    "contact": {
+        "dni": "string", 
+        "name": "string", 
+        "surname": "string",
+        "phone": "string",
+        "address": "string",
+        "email": "string",
+        "birthdate": "2023-09-08T22:34:55.579Z" 
+    }
+}
+/empleados
+	GET Query onProject: bool * 
+	POST *
+{
+    "person": {
+        "dni": "dniJuan",
+        "name": "juan",
+        "surname": "juan",
+        "phone": "juan",
+        "address": "adjkh",
+        "email": "jkhdah",
+        "birthdate": "2023-09-08T22:34:55.579Z" 
+    },
+    "department": "Comercial",
+    "dateHired": "2023-09-08T22:34:55.579Z" ,
+    "allowedHolidays": 99,
+    "username": "bruh",
+    "password": "bruh"
+}
+/empleados/:id/vacaciones
+	GET *
+	POST *
+/empleados/:id/tareas
+	GET, *
+	POST *
+/proyectos
+	GET*
+	POST * multipart/form-data
+/proyectos/:id
+	GET *
+/proyectos/:id/empleados
+	GET *
+/proyectos/:id/tareas
+	GET *
+/proyectos/:id/desvios
+	GET *
+	POST*
+/empleados/vacaciones
+	GET *
+/empleados/:idEmpleado/vacaciones/:idVacacion
+	PATCH *
+/propuestas
+	GET*
+	POST*
+{
+    "name": "mi propuesta",
+    "description": "lol",
+    "deadline": "2023-09-08T22:34:55.579Z" ,
+    "budget": 545.156,
+    "client": "goofycompany",
+    "clientContact": {
+        "dni": "stringasss",
+        "contactName": "string",
+        "contactSurname": "string",
+        "phone": "string",
+        "address": "string",
+        "email": "stirng",
+        "birthdate": "2023-09-08T22:34:55.579Z" 
+    }
+}
+/propuestas/:id
+	PATCH * multipart/form-data
+
+INSERT INTO Usuario VALUES ("admin", "admin"); /* YWRtaW46YWRtaW4= */
+INSERT INTO Persona VALUES ("dniRRHH", "a","a","a","a","a", CURRENT_DATE());
+INSERT INTO Empleado VALUES ("dniRRHH", "RRHH", CURRENT_DATE(), 99, NULL, "admin"); 
+INSERT INTO Empleado VALUES ("TecnicoDni", "Tecnica", CURRENT_DATE(), 99, NULL, "admin"); 
+
+INSERT INTO Usuario VALUES ("comercial", "comercial");
+INSERT INTO Persona VALUES ("dniComercial", "a","a","a","a","a", CURRENT_DATE());
+INSERT INTO Empleado VALUES ("dniComercial", "RRHH", CURRENT_DATE(), 99, NULL, "admin"); 
+
+
+INSERT INTO Persona VALUES ("contactoCliente", "a","a","a","a","a", CURRENT_DATE());
+
+INSERT INTO cliente VALUES("elpepe","papote","Tuvieja","contactoCliente");
+
+INSERT INTO propuesta VALUES(1,"moyaPeladoBoton","MoyaPeladoPuto",CURRENT_DATE(),4,"Enviado al cliente","Aprobado","lol","KratosEsGod","contactoCliente","elpepe","dniComercial","46755133");
+
+INSERT INTO proyecto VALUES(1,"muerte","Proyecto",CURRENT_DATE(),CURRENT_DATE(),CURRENT_DATE(),5,"dniComercial","46755133",6,1,"bbcita",10);
+
+
+INSERT INTO Propuesta VALUES();
+pagina comercial
+	carga propuesta
+	listar propuesta*
+		detalle propuesta
+	carga proyecto *
+pagina empleado tecnico
+	lista de empleados*
+	lista de tareas*
+	listar propuestas y subir archivo
+pagina empleado pete
+	lo de caceres
+pagina RRHH
+	mostrar empleados*
+		mostrar detalle empleado*
+	mostrar peticiones*
+		mostrar detalle vacacion*
+	cargar empleado
+	carga peticion
